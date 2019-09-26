@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "4fc9e1da-cc23-4162-816c-2807282c43db",
+		"name": "b2w_start_wars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Planets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/planets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"planets"
+					]
+				},
+				"description": " Listar planetas"
+			},
+			"response": []
+		},
+		{
+			"name": "SearchByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/planets?name=Tatooine1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"planets"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Tatooine1"
+						}
+					]
+				},
+				"description": "Buscar por nome"
+			},
+			"response": []
+		},
+		{
+			"name": "SearchById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/planets?id=5d8cf0fcbce02b74c7306bf4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"planets"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5d8cf0fcbce02b74c7306bf4"
+						}
+					]
+				},
+				"description": "Buscar por ID"
+			},
+			"response": []
+		},
+		{
+			"name": "NewPlanet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Tatooine\",\n\t\"climate\": \"Quente fervendo!\",\n\t\"terrain\": \"plano com praias\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/planets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"planets"
+					]
+				},
+				"description": "Adicionar um planeta"
+			},
+			"response": []
+		},
+		{
+			"name": "RemovePlanet",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Tatooine\",\n\t\"climate\": \"Quente fervendo!\",\n\t\"terrain\": \"plano com praias\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/planets/5d8cf0fcbce02b74c7306bf4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"planets",
+						"5d8cf0fcbce02b74c7306bf4"
+					]
+				},
+				"description": "Remover planeta"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePlanet",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"climate\": \"Quente fervendo!\",\n\t\"terrain\": \"plano com praias\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/planets/5d8cf2cacfd5e37bed227d0c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"planets",
+						"5d8cf2cacfd5e37bed227d0c"
+					]
+				},
+				"description": "Altera planeta"
+			},
+			"response": []
+		}
+	]
+}
